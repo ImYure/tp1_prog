@@ -1,6 +1,7 @@
-export default function Tarjeta({ materia, estado, prioridad, categoria }) {
+export default function Tarjeta({ materia, estado, prioridad, categoria, eliminar }) {
   return (
     <div className="tarjeta">
+      <button className="eliminar" onClick={() => eliminar()}>X</button>
       <h3>{materia}</h3>
       <p>{estado}</p>
       <p>{prioridad}</p>

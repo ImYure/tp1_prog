@@ -1,6 +1,6 @@
 import Tarjeta from "./Tarjeta";
 
-export default function Listado({ tareas }) {
+export default function Listado({ tareas, eliminar }) {
   return (
     <div className="listado">
       {tareas.map((tarea) => (
@@ -10,8 +10,10 @@ export default function Listado({ tareas }) {
           estado={tarea.estado}
           prioridad={tarea.prioridad}
           categoria={tarea.categoria}
+          eliminar={() => eliminar(tarea.id)}
         />
       ))}
     </div>
   );
 }
+

@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #9b59b6;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+  width: 100%;
+}
+
+.contenedor {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+.listado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 1;
+}
+
+.tarjeta {
+  background-color: #9b59b6;
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  min-height: 250px;
+  position: relative;
+}
+
+.eliminar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cambiarEstado {
+  margin-top: 15px;
+  background-color: white;
+  color: #9b59b6;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+
+.filtro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filtro button {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.formulario input,
+.formulario select {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.formulario button {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+}

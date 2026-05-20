@@ -27,13 +27,27 @@ export default function App() {
     setTareas(nuevasTareas);
   };
 
+  const cambiarEstado = (tarea_id) => {
+    const nuevasTareas = tareas.map((tarea) => {
+      if (tarea.id == tarea_id) {
+        if (tarea.estado == "pendiente")
+          return { ...tarea, estado: "en proceso" };
+        if (tarea.estado == "en proceso")
+          return { ...tarea, estado: "finalizado" };
+      }
+      return tarea;
+    });
+    setTareas(nuevasTareas);
+  };
+
   return (
     <div>
       <div className="header">Control de Tareas</div>
       <div className="contenedor">
         <Listado
-          tareas={tareanusDefault}
+          tareas={tareasDefault}
           eliminar={(tarea_id) => eliminar(tarea_id)}
+          cambiarEstado={(tarea_id) => cambiarEstado(tarea_id)}
         />
         <div className="sidebar">
           <Formulario guardar={(tarea) => guardar(tarea)} />
